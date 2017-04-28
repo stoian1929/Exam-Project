@@ -34,14 +34,12 @@
 </p>
 
 <div>
-    <footer class="text-center"><div class="form-group">
-                
-            </div>
+    <footer class="text-center divOutside form-group" style="width: 500px; margin-left: 20px;">
         @if (User.Identity.IsAuthenticated )
         {
-            @Html.ActionLink("Edit", "Edit", "Football", new { Model.Id }, new { @class = "btn btn-success btn-xs" })        
-            @Html.ActionLink("Delete", "Delete", "Football", new { Model.Id }, new { @class = "btn btn-danger btn-xs" })
+            @Html.ActionLink("Edit", "Edit", "Football", new { Model.Id }, new { @class = "btn btn-success btn-sm"  } )        
+            @Html.ActionLink("Delete", "Delete", "Football", new { Model.Id }, new { @class = "btn btn-danger btn-sm" })
         }
-            @Html.ActionLink("Back", "All", "Football", null, new { @class = "btn btn-default btn-xs" })
+            @Html.ActionLink("Back", "All", "Football", null, new { @class = "btn btn-default btn-sm" })
     </footer>
 </div>

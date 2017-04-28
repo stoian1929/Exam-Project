@@ -179,7 +179,7 @@
 
         [Authorize]
         [HttpPost]
-        public ActionResult Edit(CreateTactics models)
+        public ActionResult Edit(Edit models)
         {
             if (ModelState.IsValid)
             {
@@ -196,7 +196,7 @@
                     db.SaveChanges();
 
                 }
-                return RedirectToAction("TacticsDetails", new { id = models.Id });
+                return RedirectToAction("All", "Football");
             }
 
             return View(models);
