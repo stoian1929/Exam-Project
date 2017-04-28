@@ -1,0 +1,29 @@
+﻿@model Football.Models.Footballs.CreateTactics
+
+@{ 
+    ViewBag.Title = "Add Tactic";
+}
+<h2 class="text-center" style="background-color:darkorange">Hello trainers ,please share to us you tactic!</h2>
+<div class="container">
+    <div class="well">
+        @using (Html.BeginForm("Create", "Football", FormMethod.Post))
+        {
+            @Html.EditorForModel();
+
+            <div>
+                @Html.LabelFor(m => m.PlayerPosition)
+            </div>
+
+                <div>
+                    @Html.EnumDropDownListFor(m => m.PlayerPosition)
+                </div>
+
+
+                <br />
+                <div>
+                    <input type="submit" value="Save Tactic" />
+                </div>
+        }
+    </div>
+</div>
+
